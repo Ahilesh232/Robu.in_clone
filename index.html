@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robu.in</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    <style>
+        
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.top-bar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.contact-info i {
+    margin-right: 5px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #3b3b3b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo img {
+    max-width: 150px;
+}
+.menu-icons i {
+margin-right: 10px;
+font-size: 18px;
+}
+
+
+
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.search-bar input {
+    flex-grow: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-bar button {
+    padding: 8px;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    color: white;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.menu a:hover {
+    color: #ff6600;
+}
+/* Nav Buttons */
+/* Nav Buttons */
+.nav-buttons {
+    display: flex;
+    flex-direction: row;     /* Align buttons in a single row */
+    justify-content: center;  /* Center the buttons horizontally */
+    padding: 10px;
+    background-color: #3b3b3b;
+}
+
+.nav-buttons button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 8px 12px;       /* Compact padding for smaller buttons */
+    margin: 5px;             /* Space between buttons */
+    border-radius: 4px;      /* Slightly rounded corners */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;         /* Smaller font size */
+    min-width: 80px;         /* Set a minimum width to ensure readability */
+}
+
+.nav-buttons button:hover {
+    background-color: #ff3300;
+}
+
+.nav-buttons button:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(255, 102, 0, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-buttons {
+        flex-wrap: wrap;     /* Wrap buttons to new line if not enough space */
+        padding: 15px;       /* Adjust padding for mobile */
+    }
+
+    .nav-buttons button {
+        font-size: 12px;     /* Smaller font for mobile */
+        padding: 10px 15px;  /* Adjust padding for better touch experience */
+        min-width: 70px;     /* Ensure buttons are still clickable on mobile */
+    }
+}
+
+/* Fast Prototyping Section */
+.prototyping-section {
+    background-color: #000; /* Black background */
+    color: white; /* White text color */
+    padding: 40px 20px; /* Padding for the section */
+    text-align: center; /* Center text alignment */
+}
+
+.prototyping-grid {
+    display: flex; /* Use Flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap */
+    justify-content: center; /* Center items in the grid */
+    gap: 20px; /* Space between items */
+}
+
+.prototyping-item {
+    background-color: #1a1a1a; /* Dark gray background for items */
+    padding: 20px; /* Padding inside items */
+    border-radius: 8px; /* Rounded corners */
+    width: 200px; /* Fixed width for items */
+    color: orange; /* Text color */
+    display: flex; /* Use Flexbox to center content */
+    flex-direction: column; /* Arrange content vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text inside items */
+} 
+
+.prototyping-item img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.prototyping-item p {
+    margin-top: 10px; /* Space above paragraph */
+    font-size: 16px; /* Font size for description */
+}
+
+
+
+  /* Categories Section */
+  .categories {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.category-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.category-item {
+    width: 150px;
+    text-align: center;
+    padding: 10px;
+}
+
+.category-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.category-item p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Grid layout adjustments */
+.category-cards {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.category-card {
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 1.375rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.category-card-image-box > img {
+    border-radius: 14px;
+}
+
+.category-card:hover,
+.card:hover,
+.service-card:hover {
+    box-shadow: 2px -3px 13px #dbdada;
+}
+
+.card-item-title {
+    font-size: 1.2rem;
+}
+
+.attachment-full {
+    border-radius: 0px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Services */
+.service-title {
+    font-size: 1.2rem;
+}
+
+/* YouTube Card */
+.card-items {
+    border: 1px solid #e2dcdc;
+}
+
+/* Mobile view adjustments */
+@media (max-width: 600px) {
+    .category-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .category-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-item {
+        width: 100px;
+        padding: 5px;
+    }
+
+    .category-item img {
+        height: auto;
+    }
+
+    .card-item-title {
+        font-size: 0.8rem;
+    }
+
+    .service-title {
+        font-size: 1.2rem;
+    }
+}
+
+
+   /* Featured Products Section */
+   .featured-products {
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .carousel-container {
+            overflow: hidden; /* Hides the overflow content */
+            width: 100%; /* Full width of the container */
+        }
+
+        .product-grid {
+            display: flex;
+            transition: transform 0.5s ease-in-out; /* Smooth transition */
+        }
+
+        .product-item {
+            flex: 0 0 50%; /* Each item takes up 50% of the width (2 items visible) */
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+        }
+
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-item p {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .product-item strong {
+            font-size: 16px;
+        }
+
+        .carousel-button {
+            background-color: #007bff;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            margin: 20px 10px;
+            border-radius: 5px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+
+
+/* Google Trust Section */
+.google-trust {
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-left {
+    flex: 1;
+}
+
+.review-right {
+    flex: 1;
+    text-align: right;
+}
+
+.rating {
+    margin-top: 15px;
+}
+
+.rating img {
+    width: 100px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px; /* Space above the image */
+    /* Center it horizontally */
+}
+
+.star-rating {
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    font-size: 1.5em; /* Star size */
+    color: #FFD700; /* Gold color for filled stars */
+}
+
+.star.filled {
+    color: #FFD700; /* Filled star color */
+}
+
+.star.half-filled {
+    color: #FFD700; /* Half-filled star color */
+    position: relative;
+}
+
+.star.half-filled::after {
+    content: '\2606'; /* Unfilled star */
+    position: absolute;
+    left: 0;
+    color: #e0e0e0; /* Light gray for unfilled part */
+    width: 100%; /* Cover the filled star */
+    overflow: hidden; /* Hide the overflow */
+}
+
+.review-right img {
+    width: 60px; /* User image size */
+    height: 60px; /* User image size */
+    border-radius: 50%; /* Circular user image */
+}
+
+.review-right p {
+    margin: 5px 0; /* Margin for text */
+}
+
+/* Robu Services Section */
+.robu-services {
+padding: 40px;
+background-color: #f9f9f9;
+}
+
+.robu-services h2 {
+text-align: center;
+font-size: 2.5em;
+margin-bottom: 20px;
+}
+
+.services-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr); /* 3 columns for a matrix */
+gap: 20px; /* Space between items */
+padding: 0 20px; /* Padding for grid */
+}
+
+
+.service-item {
+display: flex; /* Use flexbox */
+flex-direction: column; /* Align items in a column */
+justify-content: center; /* Center items vertically */
+align-items: center; /* Center items horizontally */
+background: white;
+border: 1px solid #e0e0e0;
+border-radius: 8px;
+padding: 20px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s;
+height: 200px; /* Fixed height for uniformity */
+}
+
+.service-item:hover {
+transform: translateY(-5px);
+}
+
+.service-item i {
+color: orange; /* Change icon color */
+margin-bottom: 10px; /* Space between icon and text */
+}
+
+.service-item p {
+font-size: 1.2em;
+margin: 15px 0;
+text-align: center; /* Center text */
+}
+
+.btn {
+display: inline-block;
+background-color: #007bff;
+color: white;
+padding: 10px 20px;
+text-decoration: none;
+border-radius: 5px;
+transition: background-color 0.3s;
+}
+
+.btn:hover {
+background-color: #0056b3; /* Darker blue on hover */
+}
+/* Banners Section */
+.banners-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.banners-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.banners-item {
+    width: 200px;
+    text-align: center;
+}
+
+.banners-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.banners-item p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .banners-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banners-item {
+        width: 100%;
+    }
+}
+
+
+/* Logistics & Brand Features */
+.logistics-features {
+padding: 40px 20px;
+background-color: #f4f4f4;
+}
+
+.features-grid {
+display: flex;
+justify-content: space-around;
+}
+
+.feature-item {
+text-align: center;
+}
+.feature-item i {
+    font-size: 2.5rem; /* Adjust this value as needed */
+}
+
+/* Grid for Video, Blog, and Tutorial Sections */
+.video-grid, .blog-grid, .tutorial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for larger screens */
+    gap: 20px; /* Space between items */
+    padding: 0 20px;
+}
+
+/* Grid with 4 columns for larger screens */
+@media (min-width: 1024px) {
+    .video-grid, .blog-grid, .tutorial-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+    }
+}
+
+/* Responsive adjustments for tablets and smaller screens */
+@media (max-width: 768px) {
+    .video-grid, .blog-grid, .tutorial-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+    }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+    .video-grid, .blog-grid, .tutorial-grid {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+    }
+}
+
+/* Card container styles */
+.video-card, .blog-card, .tutorial-card {
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center the content horizontally */
+    gap: 10px;
+    text-align: left;
+}
+
+/* Image styles */
+.video-card img, .blog-card img, .tutorial-card img {
+    width: 100%;  /* Ensure images take full width of their container */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 200px; /* Ensure a max consistent height */
+    object-fit: cover; /* Ensure images fit the box without distortion */
+    border-radius: 8px;
+}
+
+/* Adjust max image height for mobile */
+@media (max-width: 480px) {
+    .video-card img, .blog-card img, .tutorial-card img {
+        max-height: 150px; /* Smaller height for mobile devices */
+    }
+}
+
+
+footer {
+background-color: #3A2D83;
+color: white;
+padding: 20px;
+text-align: center;
+margin-top: 20px;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+header nav ul {
+flex-direction: column;
+}
+
+.video-grid, .blog-grid, .tutorial-grid {
+grid-template-columns: 1fr;
+}
+}
+.featured-brands {
+            background-color: #f9f9f9;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .brands-grid {
+            display: grid; /* Use CSS Grid */
+            grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
+            gap: 20px; /* Space between items */
+            margin-top: 20px; /* Space above the grid */
+        }
+
+        .brands-grid img {
+            max-width: 100%; /* Responsive images */
+            height: auto; /* Maintain aspect ratio */
+            display: block; /* Ensures no gap under images */
+            margin: auto; /* Center images */
+        }
+
+        .view-all {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 20px; /* Space below the "View all" link */
+        }
+
+/* Newsletter Section */
+.newsletter {
+padding: 40px;
+background-color: #f9f9f9;
+text-align: center;
+}
+
+.newsletter h2 {
+margin-bottom: 20px;
+}
+
+.newsletter form {
+display: inline-block;
+}
+
+.newsletter input[type="text"],
+.newsletter input[type="email"] {
+padding: 10px;
+margin-right: 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+.newsletter button {
+padding: 10px 20px;
+background-color: #007bff;
+border: none;
+color: #fff;
+border-radius: 4px;
+cursor: pointer;
+}
+
+.newsletter button:hover {
+background-color: #0056b3;
+}
+
+/* Footer Section */
+footer {
+background-color: #333;
+color: #fff;
+padding: 30px;
+text-align: center;
+}
+
+.footer-links {
+display: flex;
+justify-content: space-around;
+text-align: left;
+margin-bottom: 20px;
+}
+
+.footer-links h3 {
+margin-bottom: 10px;
+}
+
+.footer-links ul {
+list-style-type: none;
+padding: 0;
+}
+
+.footer-links ul li {
+margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+color: #fff;
+text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+text-decoration: underline;
+}
+
+/* Download App Button */
+.download-app img {
+margin-bottom: 20px;
+}
+
+/* Social Media Icons */
+.social-media {
+margin: 20px 0;
+}
+
+.social-media a {
+color: #fff;
+margin: 0 10px;
+font-size: 20px;
+}
+
+.social-media a:hover {
+color: #007bff;
+}
+
+/* Contact Info */
+.contact-info {
+font-size: 14px;
+margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.footer-links {
+flex-direction: column;
+align-items: center;
+}
+
+.brands-grid {
+grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+}
+}
+
+    </style>
+    <!-- Header -->
+    <header>
+        <div class="top-bar">
+            <div class="contact-info">
+                <i class="fas fa-phone-alt"></i> 1800 266 6123 | Customer Support
+            </div>
+            <div class="account-info">
+                <a href="#">My Orders</a>
+                <a href="#">Track your order</a>
+                <a href="#">My Account</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation and Search -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo.webp"" alt="Your Company Logo">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for products...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <div class="menu-icons">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-user"></i>
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </div>
+        
+    </nav>
+    <div class="nav-buttons">
+        <button>Home</button>
+        <button>Shop</button>
+        <button>Forum</button>
+        <button>Bulk Enquiry</button>
+        <button>New Arrivals</button>
+        <button>ATL Kits Enquiry</button>
+        <button>Blogs</button>
+        <button>Careers</button>
+        <button>Sell on Robu</button>
+    </div>
+
+    
+
+    <!-- Fast Prototyping Section -->
+    <section class="prototyping-section">
+        <h2>FAST Prototyping</h2>
+        <div class="prototyping-grid">
+            <div class="prototyping-item">
+                <i class="fas fa-microchip fa-3x"></i>
+                <p>PCB Manufacturing</p>
+            </div>
+            <div class="prototyping-item">
+                <i class="fas fa-cube fa-3x"></i>
+                <p>3D Printing</p>
+            </div>
+            <div class="prototyping-item">
+                <i class="fas fa-cut fa-3x"></i>
+                <p>Laser Cutting</p>
+            </div>
+            <div class="prototyping-item">
+                <i class="fas fa-battery-full fa-3x"></i>
+                <p>Custom Battery Pack</p>
+            </div>
+        </div>
+       
+    </section>
+    <!-- Banners Section -->
+    <section class="banners-section">
+        <div class="banners-grid">
+            <div class="banners-item">
+                <a href="https://robu.in/robu-creato-3-0-submission/?utm_source=website&amp;utm_medium=creato_3_banner&amp;utm_campaign=creato_3_competition" target="_blank">
+                    <img src="https://robu.in/wp-content/uploads/2024/09/Creato-3-Submission-Banner-1.jpg" alt="Robu Creato 3 Submission Banner 1" title="Robu Creato 3 Submission Banner 1">
+                    <p>Robu Creato 3 Submission</p>
+                </a>
+            </div>
+            <div class="banners-item">
+                <a href="https://robu.in/brand/grow/?utm_source=website&amp;utm_medium=Grow_banner&amp;utm_campaign=Grow_Brand" target="_blank">
+                    <img src="https://robu.in/wp-content/uploads/2024/09/Grow-banner-2.jpg" alt="Robu Grow Banner 2" title="Robu Grow Banner 2">
+                    <p>Grow Brand</p>
+                </a>
+            </div>
+            <div class="banners-item">
+                <a href="https://robu.in/brand/cnlnko/?utm_source=website&amp;utm_medium=Cnlinko_banner&amp;utm_campaign=Cnlinko_brand" target="_blank">
+                    <img src="https://robu.in/wp-content/uploads/2024/09/CNLINKO-banner-1.jpg" alt="Robu Cnlinko Banner 1" title="Robu Cnlinko Banner 1">
+                    <p>Cnlinko Brand</p>
+                </a>
+            </div>
+            <div class="banners-item">
+                <a href="https://robu.in/product-tag/nvidia-quadro-graphics-card/?utm_source=website&amp;utm_medium=nvidia_quadro_banner&amp;utm_campaign=nvidia_quadro_Brand" target="_blank">
+                    <img src="https://robu.in/wp-content/uploads/2024/09/Nvidia-Quadro-Banner-1.jpg" alt="Robu Nvidia Quadro Banner 1" title="Robu Nvidia Quadro Banner 1">
+                    <p>Nvidia Quadro Graphics</p>
+                </a>
+            </div>
+            <div class="banners-item">
+                <a href="https://robu.in/product-category/3d-printer-parts/full-3d-printer-kit/bambu-lab-3d-printers/?utm_source=website&amp;utm_medium=bambu_lab_3d_printers_banner&amp;utm_campaign=bambu_lab_3d_printers_cat" target="_blank">
+                    <img src="https://robu.in/wp-content/uploads/2024/09/Bamboo-Lab-Banner-3-with-Coupan-Code-Offer-1.jpg" alt="Robu Bamboo Lab Banner 3 With Coupon Code Offer 1" title="Robu Bamboo Lab Banner 3 With Coupon Code Offer 1">
+                    <p>Bambu Lab 3D Printers</p>
+                </a>
+            </div>
+           
+        </div>
+    </section>
+
+    
+
+    <section class="categories">
+        <h2>Categories</h2>
+        <div class="category-grid">
+            <div class="category-item">
+                <img src="images/c1.webp" alt="Development Boards">
+                <p>Development Boards</p>
+            </div>
+            <div class="category-item">
+                <img src="images/c2.webp" alt="Batteries and Chargers">
+                <p>Batteries and Chargers</p>
+            </div>
+            <div class="category-item">
+                <img src="images/c3.webp" alt="Drone Parts">
+                <p>Drone Parts</p>
+            </div>
+            <div class="category-item">
+                <img src="images/c4.webp" alt="Sensors Modules">
+                <p>Sensors Modules</p>
+            </div>
+            <div class="category-item">
+                <img src="images/c5.webp" alt="Motors | Drivers | Pumps | Actuators">
+                <p>Motors | Drivers | Pumps | Actuators</p>
+            </div>
+            <div class="category-item">
+                <img src="images/c6.webp" alt="IoT and Wireless">
+                <p>IoT and Wireless</p>
+            </div>
+            <div class="category-item">
+                <img src="images/c7.webp" alt="Electronic Components">
+                <p>Electronic Components</p>
+            </div>
+            <div class="category-item">
+                <img src="images/c8.webp" alt="Electronic Modules and Display">
+                <p>Electronic Modules and Display</p>
+            </div>
+            <div class="category-item">
+                <img src="images/c9.webp" alt="3D Printers and Parts">
+                <p>3D Printers and Parts</p>
+            </div>
+            <div class="category-item">
+                <img src="images/c10.webp" alt="Mechanical Parts and Workbench Tools">
+                <p>Mechanical Parts and Workbench Tools</p>
+            </div>
+            <div class="category-item">
+                <img src="images/c11.webp" alt="Electric Vehicle Parts">
+                <p>Electric Vehicle Parts</p>
+            </div>
+            <div class="category-item">
+                <img src="images/c12.webp" alt="DIY Learning and Robo Kits">
+                <p>DIY Learning and Robo Kits</p>
+            </div>
+            <!-- Repeat for other categories if needed -->
+        </div>
+    </section>
+    
+
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        
+        <div class="carousel-container">
+            <div class="product-grid">
+                <div class="product-item">
+                    <img src="https://robu.in/wp-content/uploads/2023/05/366-314x252.jpg" alt="FlashForge Voxelab Aquila D1 3D Printer">
+                    <p><strong>FlashForge Voxelab Aquila D1 3D Printer</strong></p>
+                    <p>₹30,979.00 (Incl. GST)</p>
+                    <p>You Save: ₹5,020.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://robu.in/wp-content/uploads/2023/08/b.2-removebg-preview-314x252.png" alt="Mastech MS6900 Moisturemeter">
+                    <p><strong>Mastech MS6900 Moisturemeter</strong></p>
+                    <p>₹4,399.00 (Incl. GST)</p>
+                    <p>You Save: ₹300.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://robu.in/wp-content/uploads/2023/04/Pro-range-Digital-Multimeter-314x252.jpg" alt="Pro-Range SM-01 Smart Digital Multimeter">
+                    <p><strong>Pro-Range SM-01 Smart Digital Multimeter</strong></p>
+                    <p>₹799.00 (Incl. GST)</p>
+                    <p>You Save: ₹100.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://robu.in/wp-content/uploads/2023/04/1555717-314x252.jpg" alt="YU USB 3.0 Female-Male Data Connector IP67 with Cable">
+                    <p><strong>YU USB 3.0 Female-Male Data Connector IP67 with Cable</strong></p>
+                    <p>₹629.00 (Incl. GST)</p>
+                    <p>You Save: ₹50.00</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button class="carousel-button prev-button">Prev</button>
+            <button class="carousel-button next-button">Next</button>
+        </div>
+    </section>
+
+    <script>
+        const productGrid = document.querySelector('.product-grid');
+        const nextButton = document.querySelector('.next-button');
+        const prevButton = document.querySelector('.prev-button');
+        let currentSlide = 0; // Initialize current slide
+
+        nextButton.addEventListener('click', () => {
+            if (currentSlide < 1) { // Show next set of products
+                productGrid.style.transform = 'translateX(-100%)'; // Move to the next set
+                currentSlide++;
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            if (currentSlide > 0) { // Show previous set of products
+                productGrid.style.transform = 'translateX(0)'; // Move back to the first set
+                currentSlide--;
+            }
+        });
+    </script>
+    <!-- Google Trust Section -->
+    <section class="google-trust">
+        <div class="container">
+            <div class="review-left">
+                <h3><span>Google</span>-Backed Trust in Every Order</h3>
+                <div class="rating">
+                    <p><strong>Excellent</strong></p>
+                    <p>Based on <strong>5102 reviews</strong></p>
+                    <div class="star-rating">
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                        <span class="star filled">&#9733;</span>
+                        <span class="star half-filled">&#9733;</span>
+                    </div>
+                    <img src="images/Google-Logo.png" alt=" rating img">
+                </div>
+            </div>
+            <div class="review-right">
+                <img src=images/pp.jpeg alt="User Image">
+                <p><strong>Bharat D Bhadresha</strong> - 16 Aug 2024</p>
+                <p>“I have used Robu.in multiple times for electronics, 3D printing, and custom battery packs...”</p>
+            </div>
+        </div>
+    </section>
+<!-- Robu Services Section -->
+<section class="robu-services">
+    <h2>Robu Services</h2>
+    <div class="services-grid">
+        <div class="service-item">
+            <i class="fas fa-microchip fa-3x"></i>
+            <p>PCB Manufacturing Service</p> 
+            <a href="https://robu.in/product/online-pcb-manufacturing-service/" class="btn">Order Now</a>
+        </div>
+        <div class="service-item">
+            <i class="fas fa-print fa-3x"></i>
+            <p>Online FDM 3D Printing Service</p>
+            <a href="https://robu.in/product/3d-printing-service/" class="btn">Order Now</a>
+        </div>
+        <div class="service-item">
+            <i class="fas fa-battery-full fa-3x"></i>
+            <p>Customized Lithium-Ion Battery Pack</p>
+            <a href="https://robu.in/product/custom-battery-pack/" class="btn">Order Now</a>
+        </div>
+        <div class="service-item">
+            <i class="fas fa-cut fa-3x"></i>
+            <p>Metal Laser Cutting Service</p>
+            <a href="https://robu.in/product/metal-laser-cutting/" class="btn">Order Now</a>
+        </div>
+        <div class="service-item">
+            <i class="fas fa-cut fa-3x"></i>
+            <p>Non-Metal Laser Cutting Service</p>
+            <a href="https://robu.in/product/online-laser-cutting-service/" class="btn">Order Now</a>
+        </div>
+        <div class="service-item">
+            <i class="fas fa-print fa-3x"></i>
+            <p>Online SLA 3D Printing Service</p>
+            <a href="https://robu.in/product/sla-3d-printing/" class="btn">Order Now</a>
+        </div>
+        <!-- Repeat for any additional services -->
+    </div>
+</section>
+
+<!-- Logistics & Brand Features Section -->
+<section class="logistics-features">
+    <div class="features-grid">
+        <div class="feature-item">
+            <i class="fas fa-shipping-fast"></i>
+            <p>Same Day Shipping</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-headset"></i>
+            <p>Dedicated Customer Service</p>
+        </div>
+        <div class="feature-item">
+            <i class="fas fa-box"></i>
+            <p>140+ Brands</p>
+        </div>
+    </div>
+</section>
+<!-- Banners Section -->
+<section class="banners-section">
+   
+    <div class="banners-grid">
+        <div class="banners-item">
+            <a href="https://robu.in/brand/renke/?utm_source=website&amp;utm_medium=renke_banner&amp;utm_campaign=renke_Brand" target="_blank">
+                <img src="https://robu.in/wp-content/uploads/2024/09/Renke-Enviromental-Sensors-banner-lq.jpg" alt="Renke Environmental Sensors Banner">
+                <p>Renke Environmental Sensors</p>
+            </a>
+        </div>
+        <div class="banners-item">
+            <a href="https://robu.in/brand/cheemi/?utm_source=website&amp;utm_medium=cheemi_banner&amp;utm_campaign=cheemi_Brand" target="_blank">
+                <img src="https://robu.in/wp-content/uploads/2024/09/Cheemi-Sensor-Banner-LQ.jpg" alt="Cheemi Sensor Banner">
+                <p>Cheemi Sensors</p>
+            </a>
+        </div>
+        <div class="banners-item">
+            <a href="https://robu.in/brand/almighty/?utm_source=website&amp;utm_medium=banner_almighty&amp;utm_campaign=almighty_brand" target="_blank">
+                <img src="https://robu.in/wp-content/uploads/2024/09/Almighty-Fila-Banner-LQ.jpg" alt="Almighty Fila Banner">
+                <p>Almighty Filament</p>
+            </a>
+        </div>
+        <div class="banners-item">
+            <a href="https://robu.in/product-category/3d-printer-parts/full-3d-printer-kit/uniformation-3d-printers/?utm_source=website&amp;utm_medium=banner_uniformation&amp;utm_campaign=uniformation_cat" target="_blank">
+                <img src="https://robu.in/wp-content/uploads/2024/09/UNiformation-Banner-LQ.jpg" alt="Uniformation 3D Printers Banner">
+                <p>Uniformation 3D Printers</p>
+            </a>
+        </div>
+        <div class="banners-item">
+            <a href="https://robu.in/product/elegoo-saturn-4-ultra/?utm_source=website&amp;utm_medium=banner_elegoo_saturn_4_ultra&amp;utm_campaign=elegoo_saturn_4_ultra_product" target="_blank">
+                <img src="https://robu.in/wp-content/uploads/2024/09/Elegoo-Saturn-4-Ultra-banner-LQ.jpg" alt="Elegoo Saturn 4 Ultra Banner">
+                <p>Elegoo Saturn 4 Ultra</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+ <!-- Video Section -->
+ <section id="videos">
+    <h2>Our Videos</h2>
+    <div class="video-grid">
+        <div class="video-card">
+            <img src="https://i.ytimg.com/vi/_S0yCRUuO_Q/hqdefault.jpg" alt="Video Thumbnail">
+            <p>Without This Tiny Device Your Drone Would Be Useless</p>
+        </div>
+        <div class="video-card">
+            <img src="https://i.ytimg.com/vi/OSq8zrcieZs/hqdefault.jpg" alt="Video Thumbnail">
+            <p>What's Hiding Inside? Stepper Motor Teardown</p>
+        </div>
+        <div class="video-card">
+            <img src="https://i.ytimg.com/vi/wCgiy_xfRXg/hqdefault.jpg" alt="Video Thumbnail">
+            <p>ESP32 + Smart Home</p>
+        </div>
+        <div class="video-card">
+            <img src="https://i.ytimg.com/vi/wnpYD0DwF5M/hqdefault.jpg" alt="Video Thumbnail">
+            <p>Inside a Powerful Gear Motor</p>
+        </div>
+    </div>
+</section>
+ <!-- Blog Section -->
+ <section id="blogs">
+    <h2>Blogs</h2>
+    <div class="blog-grid">
+        <div class="blog-card">
+            <img src="images/b1.webp" alt="Blog Image">
+            <p>Unveiling the New Raspberry Pi 5</p>
+        </div>
+        <div class="blog-card">
+            <img src="images/b2.webp" alt="Blog Image">
+            <p>Introducing Raspberry Pi Pico 2</p>
+        </div>
+        <div class="blog-card">
+            <img src="images/b3.webp" alt="Blog Image">
+            <p>Change Fan Speed with Temperature</p>
+        </div>
+        <div class="blog-card">
+            <img src="images/b4.webp" alt="Blog Image">
+            <p>How to choose Li-Ion and Li-Po Batteries for drone and RC- Features, Comparison.</p>
+        </div>
+    </div>
+</section>
+   <!-- Tutorials Section -->
+   <section id="tutorials">
+    <h2>Tutorials</h2>
+    <div class="tutorial-grid">
+        <div class="tutorial-card">
+            <img src="images/t1.webp" alt="Tutorial Image">
+            <p>Interfacing SmartElex Sensors</p>
+        </div>
+        <div class="tutorial-card">
+            <img src="images/t2.webp" alt="Tutorial Image">
+            <p>Easy Raspberry Pi 5 Object Detection</p>
+        </div>
+        <div class="tutorial-card">
+            <img src="images/t3.webp" alt="Tutorial Image">
+            <p>How to Setup OS in Raspberry Pi 5</p>
+        </div>
+        <div class="tutorial-card">
+            <img src="images/t4.webp" alt="Tutorial Image">
+            <p>Create an eye-catching scrolling text LED display using Arduino UNO</p>
+        </div>
+    </div>
+</section>
+<section class="featured-brands">
+    <h2>Our Featured Brands</h2>
+    <a href="#" class="view-all">View all</a>
+    <div class="brands-grid">
+        <!-- Replace each img src with actual logo -->
+        <img src="images/1.webp" alt="Adafruit">
+        <img src="images/2.webp" alt="Arducam">
+        <img src="images/23.webp" alt="Arduino">
+        <img src="images/3.webp" alt="Bambu Lab">
+        <img src="images/4.webp" alt="Benewake">
+        <img src="images/5.webp" alt="Creality">
+        <img src="images/6.webp" alt="DFRobot">
+        <img src="images/7.webp" alt="DJI">
+        <img src="images/8.webp" alt="eSUN">
+        <img src="images/9.webp" alt="FrSky">
+        <img src="images/10.webp" alt="Intel">
+        <img src="images/23.webp" alt="Kamoer">
+        <img src="images/12.webp" alt="LittleBird">
+        <img src="images/18.webp" alt="M5Stack">
+        <img src="images/13.webp" alt="NexGen">
+        <img src="images/14.webp" alt="Nvidia Jetson">
+        <img src="images/15.webp" alt="Seeed Studio">
+        <img src="images/24.webp" alt="SkyRC">
+        <img src="images/17.webp" alt="SparkFun">
+        <img src="images/19.webp" alt="T-Motor">
+        <img src="images/20.webp" alt="Waveshare">
+    </div>
+</section>
+<!-- Newsletter Section -->
+<section class="newsletter">
+    <h2>Subscribe to our Newsletter</h2>
+    <form>
+        <input type="text" name="first-name" placeholder="First Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <button type="submit">Subscribe </button>
+    </form>
+</section>
+
+<!-- Footer Section -->
+<footer>
+    <div class="footer-links">
+        <div>
+            <h3>Information</h3>
+            <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </div>
+        <div>
+            <h3>My Account</h3>
+            <ul>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Register</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Why Choose Us</h3>
+            <ul>
+                <li><a href="#">Customer Reviews</a></li>
+                <li><a href="#">Quality Assurance</a></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Policies</h3>
+            <ul>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Use</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="download-app">
+        <a href="#"><img src="images/rr.webp" alt="Google Play"></a>
+    </div>
+    <div class="social-media">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+    <div class="contact-info">
+        <p>Got Questions? Call us between 9:15 AM to 6:15 PM, Monday-Saturday</p>
+        <p>1800 266 6123 | 020 68197600</p>
+    </div>
+</footer>
+
+    <footer>
+        <p>© 2024 Robu.in | Your Ideas, Our Parts</p>
+    </footer> 
+</body>
+</html>
